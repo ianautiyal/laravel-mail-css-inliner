@@ -6,7 +6,7 @@ use Pelago\Emogrifier;
 use Swift_Events_SendEvent;
 use Swift_Events_SendListener;
 
-class MailInlinerPlugin implements Swift_Events_SendListener
+class Plugin implements Swift_Events_SendListener
 {
     /**
     * @var array

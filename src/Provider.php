@@ -1,11 +1,11 @@
 <?php
 
-namespace Nautiyal\LaravelMailCssInliner;
+namespace Nautiyal\Laravel\MailCssInliner;
 
 use Swift_Mailer;
-use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
-class MailCssInlinerServiceProvider extends ServiceProvider
+class Provider extends BaseServiceProvider
 {
 
     /**
@@ -31,13 +31,13 @@ class MailCssInlinerServiceProvider extends ServiceProvider
     */
     public function register()
     {
-        $this->app->singleton(MailInlinerPlugin::class, function ($app) {
+        $this->app->singleton(Plugin::class, function ($app) {
             $options = $app['config']->get('mail-inliner') ?: [];
-            return new MailInlinerPlugin($options);
+            return new Plugin($options);
         });
 
         $this->app->extend('swift.mailer', function (Swift_Mailer $swiftMailer, $app) {
-            $inlinerPlugin = $app->make(MailInlinerPlugin::class);
+            $inlinerPlugin = $app->make(Plugin::class);
             $swiftMailer->registerPlugin($inlinerPlugin);
             return $swiftMailer;
         });

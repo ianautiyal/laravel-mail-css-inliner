@@ -1,11 +1,11 @@
 <?php
 
-namespace Nautiyal\Laravel\MailCssInliner;
+namespace Nautiyal\MailCssInliner;
 
 use Swift_Mailer;
-use Illuminate\Support\ServiceProvider as BaseServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
-class Provider extends BaseServiceProvider
+class MailCssInlinerProvider extends ServiceProvider
 {
 
     /**

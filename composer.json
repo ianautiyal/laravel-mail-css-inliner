@@ -21,7 +21,7 @@
   },
   "autoload": {
     "psr-0": {
-      "Nautiyal\\Laravel\\MailCssInliner\\": "src/"
+      "Nautiyal\\MailCssInliner\\": "src/"
     }
   },
   "minimum-stability": "dev",

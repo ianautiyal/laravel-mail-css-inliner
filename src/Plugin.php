@@ -1,6 +1,6 @@
 <?php
 
-namespace Nautiyal\LaravelMailCssInliner;
+namespace Nautiyal\MailCssInliner;
 
 use Pelago\Emogrifier;
 use Swift_Events_SendEvent;

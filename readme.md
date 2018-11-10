@@ -49,7 +49,7 @@ $ composer require nautiyal/laravel-mail-css-inliner
 
 Once this operation completes, you must add the service provider. Open `app/config/app.php`, and add a new item to the providers array.
 ```php
-Nautiyal\Lara\MailCssInlinerProvider::class,
+Nautiyal\MailCssInliner\MailCssInlinerProvider::class,
 ```
 
 ## Found a bug?
